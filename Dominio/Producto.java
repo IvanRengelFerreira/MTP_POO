@@ -2,11 +2,12 @@ package Dominio;
 
 //Clase padre de ProductoMedible y ProductoNoMedible, donde aplicamos herencia y abstraccion a traves de los atributos y el metodo abstracto calcularPrecio
 //Contiene los atributos y metodos comunes de los productos
-//Tiene un metodo abstracto calcularPrecio que sera implementado por las clases hijas
-//Se aplica encapsulamiento a los atributos de la clase siendo protected para que puedan ser accedidos por las clases hijas
+
+
 public abstract class Producto {
+    //Se aplica encapsulamiento a nombre siendo protected para que puedan ser accedidos por las clases hijas
     protected String nombre;
-    protected double precio;
+    
     
 
     public Producto(String nombre) {
@@ -22,6 +23,9 @@ public abstract class Producto {
         this.nombre = nombre;
     }
 
+
+
+    //Metodo abstracto que sera implementado por las clases hijas
     public abstract double calcularPrecio();
 
 }

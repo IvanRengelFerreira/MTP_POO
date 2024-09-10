@@ -2,15 +2,16 @@ package Dominio;
 
 //Clase hija de Producto
 //Contiene los atributos y metodos especificos de los productos no medibles
-//Se aplica encapsulamiento a los atributos de la clase siendo private para que solo puedan ser accedidos por la misma clase
+
 
 
 public class ProductoNoMedible extends Producto {
+    //Se aplica encapsulamiento a los atributos de la clase siendo private para que solo puedan ser accedidos por la misma clase
     private int cantidad;
     private double precioUnidad;
 
     public ProductoNoMedible(String nombre,int cantidad,int precioUnidad, int cantidadUnidad) {
-        //Llamamos al constructor de la clase padre con super
+        //Llamamos al constructor de la clase padre con super donde lograra que heredemos los atributos de las clase padre
         super(nombre);
         this.cantidad = cantidad;
         this.precioUnidad = precioUnidad;
@@ -31,7 +32,7 @@ public class ProductoNoMedible extends Producto {
     public void setPrecioUnidad(double precioUnidad) {
         this.precioUnidad = precioUnidad;
     }
-
+    //metdodo abstracto heredado de la clase padre donde aplicamos abstraccion
     public double calcularPrecio() {
         return cantidad * precioUnidad;
     }
